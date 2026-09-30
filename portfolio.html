@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varad Narkhede | Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #503B31;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background-color: #705D56;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            color: #A7BBEC;
+            letter-spacing: -0.5px;
+        }
+
+        header .tagline {
+            margin-top: 8px;
+            font-size: 18px;
+            color: #9097C0;
+            font-weight: 500;
+        }
+
+        nav {
+            background-color: #503B31;
+            padding: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #503B31;
+            background-color: #A7BBEC;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 30px;
+            background-color: #705D56;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            scroll-margin-top: 80px;
+        }
+
+        section h2 {
+            color: #A7BBEC;
+            margin-top: 0;
+            font-size: 24px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        #about img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 15px 0;
+            border: 3px solid #9097C0;
+        }
+
+        #about p {
+            max-width: 700px;
+            margin: 0 auto 12px auto;
+            color: #f1f5f9;
+        }
+
+        #skills ul {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #skills li {
+            background-color: #503B31;
+            color: #A7BBEC;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #9097C0;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background-color: #503B31;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            border-color: #A7BBEC;
+        }
+
+        .project h3 {
+            color: #A7BBEC;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .project p {
+            color: #e2e8f0;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .timeline-item {
+            border-left: 2px solid #9097C0;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-item h3 {
+            color: #A7BBEC;
+            margin: 0 0 4px 0;
+            font-size: 16px;
+        }
+
+        .timeline-item h4 {
+            color: #ffffff;
+            margin: 0 0 6px 0;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-item p {
+            color: #e2e8f0;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        #contact p {
+            color: #f8fafc;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        #contact a {
+            color: #A7BBEC;
+            text-decoration: none;
+            font-weight: 500;
+            background-color: #503B31;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #9097C0;
+            transition: all 0.2s ease;
+        }
+
+        #contact a:hover {
+            background-color: #A7BBEC;
+            color: #503B31;
+        }
+
+        @media (max-width: 700px) {
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Varad Narkhede</h1>
+        <p class="tagline"> 1st year Student</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/v1/shutterstock_329662223_ss_non-editorial_3_csm8lw?_a=BAVT+OE80" alt="Profile picture">
+        <p>Hi, I'm Varad Narkhede, a student learning Web Development. I enjoy building simple, intuitive websites and exploring modern web technologies.</p>
+        <p>I am actively improving my skills in HTML, CSS, JavaScript, and programming fundamentals while working on creative side projects.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A clean portfolio website created using HTML and CSS to showcase my projects, skills, and background.</p>
+            </div>
+
+            <div class="project"> 
+                <h3>To-Do List</h3> 
+                <p>A simple task management app that allows users to create, organize, and check off daily tasks.</p> 
+            </div> 
+
+            <div class="project"> 
+                <h3>Calculator</h3> 
+                <p>An interactive web calculator performing essential arithmetic operations with a responsive layout.</p> 
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="timeline-item">
+            <h3>2024</h3> 
+            <h4>Orion CBSE english medium school (Class 10)</h4>
+            <p>Completed Class 10 education with focus on core science and mathematics.</p>
+        </div> 
+
+        <div class="timeline-item"> 
+            <h3>2024 - 2026</h3>
+            <h4>L.H.Patil english medium school (Class 11 - 12)</h4> 
+            <p>Pursuing high school studies with a focus on Science stream.</p>
+        </div> 
+
+         <div class="timeline-item">
+            <h3>2026 - 2030</h3>
+            <h4>Scaler School of Technology</h4>
+            <p>Pursuing a degree in Computer Science with a focus on web development and software engineering.</p>
+         </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>I am always open to collaborating on interesting projects.</p>
+
+        <p><strong>Email:</strong> varadnarkhede26@gmail.com</p>
+
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/varad-narkhede-79a49225b/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/varad26bcs10434-dotcom" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+</body>
+</html>
